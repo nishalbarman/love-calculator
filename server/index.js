@@ -138,17 +138,17 @@ app.get("/api/admin/results", authenticateAdmin, async (req, res) => {
 });
 
 // Create admin if not exists (run once)
-async function createAdmin() {
-  const adminExists = await Admin.findOne({ username: "admin" });
-  if (!adminExists) {
-    const hashedPassword = await bcrypt.hash("admin123", 10);
-    const admin = new Admin({ username: "admin", password: hashedPassword });
-    await admin.save();
-    console.log("Admin user created");
-  }
-}
+// async function createAdmin() {
+//   const adminExists = await Admin.findOne({ username: "admin" });
+//   if (!adminExists) {
+//     const hashedPassword = await bcrypt.hash("admin123", 10);
+//     const admin = new Admin({ username: "admin", password: hashedPassword });
+//     await admin.save();
+//     console.log("Admin user created");
+//   }
+// }
 
-createAdmin();
+// createAdmin();
 
 // Start server
 const PORT = process.env.PORT || 5000;

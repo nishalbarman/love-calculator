@@ -29,7 +29,7 @@ const LoveCalculator = () => {
     setError("");
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/calculate-love",
+        `https://love-calculator-i7d3.onrender.com/api/calculate-love`,
         {
           name1,
           name2,

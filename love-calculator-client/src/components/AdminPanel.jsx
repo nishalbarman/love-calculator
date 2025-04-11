@@ -13,7 +13,7 @@ const AdminPanel = () => {
       try {
         const token = localStorage.getItem("adminToken");
         const response = await axios.get(
-          "http://localhost:5000/api/admin/results",
+          "https://love-calculator-i7d3.onrender.com/api/admin/results",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

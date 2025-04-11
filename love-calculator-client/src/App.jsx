@@ -11,7 +11,6 @@ import "./App.css";
 import AdminLogin from "./components/AdminLogin";
 import AdminPanel from "./components/AdminPanel";
 import LoveCalculator from "./components/LoveCalculator";
-import BgAnimatedObjects from "./components/BgAnimatedObjects";
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
