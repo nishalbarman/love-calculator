@@ -127,7 +127,8 @@ const LoveCalculator = () => {
       transition={{ duration: 0.5 }}>
       <h1 className="title">
         <FaHeart className="heart-icon mr-2" />
-        <span className="font-bold">Love Calculator</span>
+        <span className="font-bold text-2xl">Love Calculator</span>
+        <FaHeart className="heart-icon ml-2" />
       </h1>
 
       <form onSubmit={calculateLove} className="love-form">
