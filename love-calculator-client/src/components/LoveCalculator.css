@@ -1,0 +1,260 @@
+/* Thala for a Reason Styles */
+.thala-banner {
+  background: linear-gradient(90deg, #ff6b6b, #ff8e8e, #ff6b6b);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  animation: thalaPulse 2s infinite;
+}
+
+.thala-icon {
+  font-size: 1.2rem;
+  animation: spin 3s linear infinite;
+}
+
+.thala-message {
+  background-color: #fff0f0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ff6b6b;
+  border-left: 4px solid #ff6b6b;
+}
+
+.thala-fact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px dashed #ff6b6b;
+}
+
+.thala-fact-icon {
+  color: #ff6b6b;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.thala-fact p {
+  margin: 0;
+  color: #555;
+}
+
+@keyframes thalaPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Name Info Section */
+.name-info-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.name-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.name-stat {
+  padding: 1rem;
+  background-color: #fff9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.name-stat.highlight {
+  background-color: #fff0f0;
+  border: 1px solid #ff6b6b;
+}
+
+.stat-label {
+  display: block;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-bottom: 0.3rem;
+}
+
+.stat-value {
+  display: block;
+  color: #555;
+}
+
+/* Result Container */
+.result-container {
+  background-color: #fff9fa;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.result-id {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.main-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.compatibility-text {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.compatibility-text h3 {
+  color: #ff6b6b;
+  margin-bottom: 0.5rem;
+}
+
+.compatibility-text p {
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.strengths-section,
+.metrics-section,
+.advice-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.strengths-section h3,
+.metrics-section h3,
+.advice-section h3 {
+  color: #ff6b6b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  color: #ff6b6b;
+}
+
+/* Strengths List */
+.strengths-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.strengths-list li {
+  padding: 0.7rem 1rem;
+  margin: 0.3rem 0;
+  background-color: #fff0f0;
+  border-radius: 8px;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.strengths-list li::before {
+  content: "❤️";
+  position: absolute;
+  left: 0.8rem;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.metric-bar {
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.metric-fill {
+  height: 100%;
+  background-color: #ff6b6b;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+.metric-value {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: right;
+}
+
+/* Advice Section */
+.advice-section p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main-result {
+    flex-direction: column;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
