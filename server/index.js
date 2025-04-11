@@ -137,6 +137,31 @@ app.get("/api/admin/results", authenticateAdmin, async (req, res) => {
   }
 });
 
+// Delete single result
+app.delete("/api/admin/results/:id", authenticateAdmin, async (req, res) => {
+  try {
+    const result = await LoveResult.findByIdAndDelete(req.params.id);
+    if (!result) {
+      return res.status(404).json({ error: "Result not found" });
+    }
+    res.json({ message: "Result deleted successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// Delete all results
+app.delete("/api/admin/results", authenticateAdmin, async (req, res) => {
+  try {
+    await LoveResult.deleteMany({});
+    res.json({ message: "All results deleted successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
 // Create admin if not exists (run once)
 // async function createAdmin() {
 //   const adminExists = await Admin.findOne({ username: "admin" });

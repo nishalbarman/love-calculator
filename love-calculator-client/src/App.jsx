@@ -12,6 +12,9 @@ import AdminLogin from "./components/AdminLogin";
 import AdminPanel from "./components/AdminPanel";
 import LoveCalculator from "./components/LoveCalculator";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
 
@@ -24,6 +27,7 @@ const App = () => {
 
   return (
     <Router>
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="app">
         {/* Background elements */}
         <div className="background-elements">
